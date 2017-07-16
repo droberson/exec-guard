@@ -20,11 +20,11 @@ int execve(const char *progname, char *const argv[], char *const envp[]) {
   int		commandlen;
   size_t	len;
   pid_t		ppid;
-
   int		found = 0;
   char		basepath[PATH_MAX];
-  char		*valid_paths[] = { "/bin", "/sbin", "/usr/bin", "/usr/sbin" };
 
+  /* Add/remove whitelisted paths here. */
+  char		*valid_paths[] = { "/bin", "/sbin", "/usr/bin", "/usr/sbin" };
 
 
   ppid = getppid();
