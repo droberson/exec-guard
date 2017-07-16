@@ -9,8 +9,7 @@ be logged.
 
 ## Installation
 
-   $ make
-   $ sudo cp exec-guard.so /usr/lib
-   $ sudo vi /etc/ld.so.preload ## add a line: "/usr/lib/exec-guard.so"
-
+	$ make
+	$ sudo cp exec-guard.so /usr/lib
+	$ sudo vi /etc/ld.so.preload ## add a line: "/usr/lib/exec-guard.so"
 
