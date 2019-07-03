@@ -34,7 +34,7 @@ int execve(const char *progname, char *const argv[], char *const envp[]) {
 
   fp = fopen(loginuid, "r");
   if (fp == NULL) {
-    syslog(LOG_WARNING, "ERROR: Couldn't open /prox/%d/loginuid", ppid);
+    syslog(LOG_WARNING, "ERROR: Couldn't open /proc/%d/loginuid", ppid);
   } else {
     if (fscanf(fp, "%d", &uid) != 1) {
       syslog(LOG_WARNING, "ERROR: Couldn't read /proc/%d/loginuid", ppid);
